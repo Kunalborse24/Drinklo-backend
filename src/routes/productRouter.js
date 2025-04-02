@@ -5,10 +5,12 @@ const productController = require('../controllers/productController');  // Impor
 // Get all products
 router.get('/', productController.getAllProducts);
 
+// Get product by ID
+router.get('/:id', productController.getProductById);
+
 // Get products by category
 router.get('/category/:categoryId', productController.getProductByCategory);
 
-// Get product by ID
-router.get('/:id', productController.getProductById);
+
 
 module.exports = router;
